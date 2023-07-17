@@ -10,7 +10,7 @@
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
     <script src="http://localhost/cleoracy/views/theme/virtualSelect/virtual-select.min.js"></script>
-    <link rel="stylesheet" href="http://localhost/cleoracy/views/theme/virtualSelect/virtual-select.min.css" />
+    <link rel="stylesheet" href="<?=site("root")?>/views/theme/virtualSelect/virtual-select.min.css" />
 </head>
 <body>
     <!-- Barra de navegação -->

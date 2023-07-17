@@ -6,11 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
 
-    <link rel="stylesheet" type="text/css" href="http://cleoracy.online/views/theme/app/evo/css/evo-calendar.css"/>
-    <link rel="stylesheet" type="text/css" href="http://cleoracy.online/views/theme/app/evo/css/evo-calendar.midnight-blue.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=site("root")?>/views/theme/app/evo/css/evo-calendar.css"/>
+    <link rel="stylesheet" type="text/css" href="<?=site("root")?>/views/theme/app/evo/css/evo-calendar.midnight-blue.css"/>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-    <script src="http://cleoracy.online/views/theme/app/evo/js/evo-calendar.js"></script>
+    <script src="<?=site("root")?>/views/theme/app/evo/js/evo-calendar.js"></script>
     
     <title>Colégio Cleoracy</title>
 </head>

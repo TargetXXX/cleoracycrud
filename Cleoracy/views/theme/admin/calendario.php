@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="http://cleoracy.online/views/theme/app/evo/css/evo-calendar.css" />
-    <link rel="stylesheet" type="text/css" href="http://cleoracy.online/views/theme/app/evo/css/evo-calendar.midnight-blue.css" />
+    <link rel="stylesheet" type="text/css" href="<?=site("root")?>/views/theme/app/evo/css/evo-calendar.css" />
+    <link rel="stylesheet" type="text/css" href="<?=site("root")?>/views/theme/app/evo/css/evo-calendar.midnight-blue.css" />
 
-    <script src="http://cleoracy.online/views/theme/app/evo/js/evo-calendar.js"></script>
+    <script src="<?=site("root")?>/views/theme/app/evo/js/evo-calendar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
 </head>
 

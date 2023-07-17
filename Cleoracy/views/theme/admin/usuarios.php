@@ -9,8 +9,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.18/dist/sweetalert2.all.min.js"></script>
-    <script src="http://localhost/cleoracy/views/theme/virtualSelect/virtual-select.min.js"></script>
-    <link rel="stylesheet" href="http://localhost/cleoracy/views/theme/virtualSelect/virtual-select.min.css" />
+    <script src="<?=site("root")?>/views/theme/virtualSelect/virtual-select.min.js"></script>
+    <link rel="stylesheet" href="<?=site("root")?>/views/theme/virtualSelect/virtual-select.min.css" />
 </head>
 <body>
     <!-- Barra de navegação -->

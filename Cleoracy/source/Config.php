@@ -2,12 +2,17 @@
 
 define("ROOT", realpath(dirname(__FILE__)));
 
+
+$host = $_SERVER['HTTP_HOST'];
+$projectFolder = basename(ROOT);
+$root = "http://{$host}/{$projectFolder}";
+
 define("SITE", [
     "name" => "Colégio Cleoracy",
     "desc" => "Cleoracy",
     "domain" => "",
     "locale" => "pt-BR",
-    "root" => "http://localhost/cleoracy"
+    "root" => $root
 ]);
 
 define("DATA_LAYER_CONFIG", [
@@ -140,8 +145,6 @@ try {
         INSERT INTO usuarios (Id, First_Name, Last_Name, Username, Password, Email, Grupo, forget, Verified, verify_code, Avatar, Turma, MateriasTurma, NotaMateria) VALUES
         (1, 'Eduardo\r\n', 'Oliveira', 'teste', '$2y$10$6gRftGsdpzCU72Vcy/4LyembYN92uGUl186iYJFckB2vMGf3xHOyu', 'eduardo.oliveira@gazin.com.br', 'Owner', 'ec41499104ae24f219a639dc59b5e99d', 'true', NULL, '/source/Client/Files/Images/Usuarios/perfil.jpeg', NULL, NULL, '');
     ");
-
-    echo "Tabelas criadas e dados inseridos com sucesso!";
 } catch (PDOException $e) {
     die("Erro ao criar as tabelas: " . $e->getMessage());
 }
