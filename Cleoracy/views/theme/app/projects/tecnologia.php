@@ -28,7 +28,7 @@
         </header>
       <body>
       <div class="background-container">
-        <img src="http://localhost/cleoracy/views/assets/images/indomavel.png" alt="Imagem de fundo" />
+        <img src="<?=site("root")?>/views/assets/images/indomavel.png" alt="Imagem de fundo" />
       </div>
 
         <div id="Antes">
@@ -54,39 +54,39 @@
                     </ol>
                     <div class="carousel-inner">
                       <div class="carousel-item active">
-                        <img src="http://localhost/cleoracy/views/assets/images/avancos.png" class="d-block w-100" alt="Slide 1">
+                        <img src="<?=site("root")?>/views/assets/images/avancos.png" class="d-block w-100" alt="Slide 1">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/aprendizagem.png" class="d-block w-100" alt="Slide 2">
+                        <img src="<?=site("root")?>/views/assets/images/aprendizagem.png" class="d-block w-100" alt="Slide 2">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/colaborativa.png" class="d-block w-100" alt="Slide 3">
+                        <img src="<?=site("root")?>/views/assets/images/colaborativa.png" class="d-block w-100" alt="Slide 3">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/gamificacao.png" class="d-block w-100" alt="Slide 4">
+                        <img src="<?=site("root")?>/views/assets/images/gamificacao.png" class="d-block w-100" alt="Slide 4">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/realidade.png" class="d-block w-100" alt="Slide 5">
+                        <img src="<?=site("root")?>/views/assets/images/realidade.png" class="d-block w-100" alt="Slide 5">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/movel.png" class="d-block w-100" alt="Slide 6">
+                        <img src="<?=site("root")?>/views/assets/images/movel.png" class="d-block w-100" alt="Slide 6">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/avaliacao.png" class="d-block w-100" alt="Slide 7">
+                        <img src="<?=site("root")?>/views/assets/images/avaliacao.png" class="d-block w-100" alt="Slide 7">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/quiz.jpg" class="d-block w-100" alt="Slide 8">
+                        <img src="<?=site("root")?>/views/assets/images/quiz.jpg" class="d-block w-100" alt="Slide 8">
       
                       </div>
                       <div class="carousel-item">
-                        <img src="http://localhost/cleoracy/views/assets/images/potencial.png" class="d-block w-100" alt="Slide 9">
+                        <img src="<?=site("root")?>/views/assets/images/potencial.png" class="d-block w-100" alt="Slide 9">
       
                       </div>
                       
@@ -108,7 +108,7 @@
       <footer id="footer" style="background-color: white;" class="d-flex flex-wrap justify-content-between align-items-center py-3 border-top">
           <div class="col-md-4 d-flex align-items-center">
           <a href="#" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1" style="margin-right: 20px;">
-                  <img src="http://localhost/cleoracy/views/assets/images/logo.png" width="35" height="35" class="bi" viewBox="0 0 16 16">
+                  <img src="<?=site("root")?>/views/assets/images/logo.png" width="35" height="35" class="bi" viewBox="0 0 16 16">
             </a>
             <span class="mb-3 mb-md-0 text-body-secondary">© 2023 Colégio Cleoracy Aparecida Gil</span>
           </div>     

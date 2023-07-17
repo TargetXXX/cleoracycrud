@@ -5,7 +5,7 @@ define("ROOT", realpath(dirname(__FILE__)));
 
 $host = $_SERVER['HTTP_HOST'];
 $projectFolder = basename(ROOT);
-$root = "http://{$host}/{$projectFolder}";
+$root = "http://{$host}/cleoracy";
 
 define("SITE", [
     "name" => "Colégio Cleoracy",
@@ -141,10 +141,16 @@ try {
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
     ");
 
-    $pdo->exec("
-        INSERT INTO usuarios (Id, First_Name, Last_Name, Username, Password, Email, Grupo, forget, Verified, verify_code, Avatar, Turma, MateriasTurma, NotaMateria) VALUES
-        (1, 'Eduardo\r\n', 'Oliveira', 'teste', '$2y$10$6gRftGsdpzCU72Vcy/4LyembYN92uGUl186iYJFckB2vMGf3xHOyu', 'eduardo.oliveira@gazin.com.br', 'Owner', 'ec41499104ae24f219a639dc59b5e99d', 'true', NULL, '/source/Client/Files/Images/Usuarios/perfil.jpeg', NULL, NULL, '');
-    ");
+    $query = $pdo->query("SHOW TABLES LIKE 'usuarios'");
+    $tableExists = $query->rowCount() > 0;
+
+    if (!$tableExists) {
+
+        $pdo->exec("
+            INSERT INTO usuarios (Id, First_Name, Last_Name, Username, Password, Email, Grupo, forget, Verified, verify_code, Avatar, Turma, MateriasTurma, NotaMateria) VALUES
+            (1, 'Eduardo\r\n', 'Oliveira', 'teste', '$2y$10$6gRftGsdpzCU72Vcy/4LyembYN92uGUl186iYJFckB2vMGf3xHOyu', 'eduardo.oliveira@gazin.com.br', 'Owner', 'ec41499104ae24f219a639dc59b5e99d', 'true', NULL, '/source/Client/Files/Images/Usuarios/perfil.jpeg', NULL, NULL, '');
+        ");
+    }
 } catch (PDOException $e) {
     die("Erro ao criar as tabelas: " . $e->getMessage());
 }

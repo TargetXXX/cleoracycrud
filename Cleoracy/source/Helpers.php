@@ -1580,7 +1580,7 @@ function getGallery()
     echo "<div style='width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;'>";
 
     foreach ($galleryImages as $img) {
-        $path = 'http://localhost/cleoracy' . $img["Image"];
+        $path = site("root") . $img["Image"];
 
         echo "<div class='gallery-image'  style='margin: 10px; border: solid black 2px; display: flex;   width: 17vw; height: 15vw; background-image: url($path); background-color: white; background-repeat: no-repeat; background-size: cover; background-position: center; justify-content: center; align-items: center; text-align: center; position: relative;'>"
             . $img["Text"]. "<input type='hidden' class='image-id' value='" . $img['Id'] . "'>"

@@ -24,7 +24,7 @@
                     <div class="user_card" style="left: 110%;">
                         <div class="d-flex justify-content-center">
                             <div class="brand_logo_container">
-                                <img src="http://localhost/cleoracy/views/assets/images/logo.png" class="brand_logo" alt="Logo">
+                                <img src="<?=site("root")?>/views/assets/images/logo.png" class="brand_logo" alt="Logo">
                             </div>
                         </div>
                         <div class="d-flex justify-content-center form_container">

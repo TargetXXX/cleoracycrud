@@ -91,7 +91,7 @@
         </div>
       </header>
       <div class="background-container">
-          <img src="http://localhost/cleoracy/views/assets/images/dashboard.jpg" alt="Imagem de fundo" />
+          <img src="<?=site("root")?>/views/assets/images/dashboard.jpg" alt="Imagem de fundo" />
         </div>
 
       </body>
