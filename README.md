@@ -5,6 +5,11 @@ Crud Cleoracy
 
 Este repositório contém o código-fonte do site de Gerenciamento Escolar, que inclui sistemas para manutenção de galeria, calendário, cardápio, notas, matérias, turmas, mensagens e usuários.
 
+## Acessando o Site
+
+Para visualizar o site, deve-se instalar o Xampp e  mover a pasta **Cleoracy** deste projeto para seu diretório HTDOCS, a fim de fazer sua inicialização. O banco de dados **escola** deve ser criado no MySql e suas credenciais configuradas no arquivo **config.php** dentro da pasta Source do projeto. Para iniciar o sistema de recuperação de senhas, deve-se configurar o SMTP pelo mesmo arquivo.
+
+Após cumprir os passos apresentados anteriormente, deve-se instalar o composer no dispositivo, acessar o diretório do projeto e usar o comando **composer install** no terminal para adicionar as dependências do projeto. Logo em seguida, deve-se acessar a URL local do seu dispositivo, normalmente **localhost/cleoracy**, para acessar o site no navegador. As tabelas de dados são criadas automaticamente. Recomenda-se o uso do Google Chrome para melhor experiência.
 
 ## Estrutura do Site
 
@@ -23,12 +28,6 @@ O **header** do site é a seção superior que contém o logotipo e a navegaçã
 ## Footer
 
 O **footer** é a seção inferior do site, que contém informações adicionais, links úteis e créditos. No site, a maioria das páginas apresenta o footer com a logo do Colégio Cleoracy, assim suas redes sociais.
-
-## Acessando o Site
-
-Para visualizar o site, deve-se instalar o Xampp e  mover a pasta **Cleoracy** deste projeto para seu diretório HTDOCS, a fim de fazer sua inicialização. O banco de dados **escola** deve ser criado no MySql e suas credenciais configuradas no arquivo **config.php** dentro da pasta Source do projeto. Para iniciar o sistema de recuperação de senhas, deve-se configurar o SMTP pelo mesmo arquivo.
-
-Após cumprir os passos apresentados anteriormente, deve-se instalar o composer no dispositivo, acessar o diretório do projeto e usar o comando **composer install** no terminal para adicionar as dependências do projeto. Logo em seguida, deve-se acessar a URL local do seu dispositivo, normalmente **localhost/cleoracy**, para acessar o site no navegador. As tabelas de dados são criadas automaticamente. Recomenda-se o uso do Google Chrome para melhor experiência.
 
 ## Créditos
 
