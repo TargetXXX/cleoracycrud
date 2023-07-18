@@ -1,7 +1,7 @@
 # cleoracycrud
 Crud Cleoracy
 
-# Crud - Gerenciamente Escola
+# Crud - Gerenciamento Escola
 
 Este repositório contém o código-fonte do site de Gerenciamento Escolar, que inclui sistemas para manutenção de galeria, calendário, cardápio, notas, matérias, turmas, mensagens e usuários.
 
