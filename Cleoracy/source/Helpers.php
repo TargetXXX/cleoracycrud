@@ -644,24 +644,27 @@ function htmlAlunoNotaByMateria(int $AlunoID, int $MateriaID) : string {
 
     foreach ($formattedObj as $o) {
 
-        $color = ($o->Nota > 60) ? 'style="color: blue;"' : 'style="color: red;"';
+        $nota = $o["Nota"];
+        $periodo = $o["Periodo"];
 
-        if($o->Nota > 90) $color = 'style="color: green;"';
+        $color = ($nota > 60) ? 'style="color: blue;"' : 'style="color: red;"';
 
-        if ($o->Periodo == 1) {
+        if($nota > 90) $color = 'style="color: green;"';
 
-            $first_grade = '<td '.$color.' class="text-center"> <strong>'. $o->Nota . '</strong></td>';
-            $int1 = intval($o->Nota);
+        if ($periodo == 1) {
+
+            $first_grade = '<td '.$color.' class="text-center"> <strong>'. $nota . '</strong></td>';
+            $int1 = intval($nota);
            
-        } else if ($o->Periodo == 2) {
-            $second_grade = '<td '.$color.' class="text-center"> <strong>'. $o->Nota . '</strong></td>';
-            $int2 = intval($o->Nota);
-        } else if ($o->Periodo == 3) {
-            $third_grade = '<td '.$color.' class="text-center"> <strong>'. $o->Nota . '</strong></td>';
-            $int3 = intval($o->Nota);
-        } else if ($o->Periodo == 4) {
-            $fourth_grade = '<td '.$color.' class="text-center"> <strong>'. $o->Nota . '</strong></td>';
-            $int4 = intval($o->Nota);
+        } else if ($periodo == 2) {
+            $second_grade = '<td '.$color.' class="text-center"> <strong>'. $nota . '</strong></td>';
+            $int2 = intval($nota);
+        } else if ($periodo == 3) {
+            $third_grade = '<td '.$color.' class="text-center"> <strong>'. $nota . '</strong></td>';
+            $int3 = intval($nota);
+        } else if ($periodo == 4) {
+            $fourth_grade = '<td '.$color.' class="text-center"> <strong>'. $nota . '</strong></td>';
+            $int4 = intval($nota);
         }
     }
 
