@@ -456,6 +456,9 @@ function createMateriasTable() : void {
     if($Materias) {
 
         foreach($Materias as $row) {
+
+            if(is_object($row)) $row = get_object_vars($row);
+
             $Id = $row["Id"];
             $Name = $row["Name"];
             $Turma = $row["Turma"];
@@ -505,6 +508,8 @@ function createMateriasTable() : void {
                     } else {
 
                         foreach($turmas as $T) { 
+
+                            if(is_object($T)) $T = get_object_vars($T);
                             $selected = ($Turma == $T["Id"]) ? 'selected' : '';
                             echo $Turma;
                             echo "<option $selected value='".$T['Id']."'>".$T['Name']."</option>";
@@ -604,6 +609,7 @@ function htmlAlunoNotaByMateria(int $AlunoID, int $MateriaID) : string {
     }
 
     foreach ($objs as $obj) {
+
         $carac = explode(',', $obj);
         $oNota = $carac[0];
         $oMateria = $carac[1];
@@ -633,7 +639,7 @@ function htmlAlunoNotaByMateria(int $AlunoID, int $MateriaID) : string {
 
 
     foreach ($formattedObj as $o) {
-
+        if(is_object($o)) $o = get_object_vars($o);
 
         $color = ($o["Nota"] > 60) ? 'style="color: blue;"' : 'style="color: red;"';
 
@@ -711,6 +717,8 @@ function createAlunoNotasTable() : void {
     }
 
        foreach($MateriasByTurma as $row) {
+
+        if(is_object($row)) $row = get_object_vars($row);
            $Id = $row["Id"];
            $Name = $row["Name"];
 
@@ -861,7 +869,7 @@ function createProfNotasTable() : void {
             
                                 if ($alunos) {
                                     foreach ($alunos as $a) {
-            
+                                        if(is_object($a)) $a = get_object_vars($a);
                                         array_push($all, [
                                             'value' => $a["Id"],
                                             'label' => $a["First_Name"] . ' ' . $a["Last_Name"]
@@ -958,6 +966,8 @@ function createProfNotasTable() : void {
 
 
         foreach($Materias as $row) {
+            if(is_object($row)) $row = get_object_vars($row);
+
             $Id = $row["Id"];
             $Name = $row["Name"];
             $Turma = $row["Turma"];
@@ -1000,7 +1010,7 @@ function createProfNotasTable() : void {
 
                     if ($alunos) {
                         foreach ($alunos as $a) {
-
+                            if(is_object($a)) $a = get_object_vars($a);
                             array_push($all, [
                                 'value' => $a["Id"],
                                 'label' => $a["First_Name"] . ' ' . $a["Last_Name"]
@@ -1121,6 +1131,9 @@ function createUsersOwnMessages() {
 
     
         foreach($messages as $row) {
+
+            if(is_object($row)) $row = get_object_vars($row);
+
             $Id = $row["Id"];
             $Assunto = $row["Assunto"];
             $Message = $row["Message"];
@@ -1248,6 +1261,9 @@ function createUsersTable() : void {
           
 
           foreach ($users as $row) {
+
+            if(is_object($row)) $row = get_object_vars($row);
+
                 $id = $row["Id"];
                 $first_name = $row["First_Name"];
                 $last_name = $row["Last_Name"];
@@ -1349,6 +1365,8 @@ function createUsersTable() : void {
                                     
 
                                     foreach ($turmas as $Turma) {
+
+                                        if(is_object($Turma)) $Turma = get_object_vars($Turma);
                                         $turm = $row["Turma"];
                                         $selected = ($grupo == 'Aluno' && $turm == $Turma["Id"] ) ? 'selected' : '';
                                         echo "<option value='".$Turma["Id"]."' ".$selected.">".$Turma["Name"]."</option>";
@@ -1375,6 +1393,9 @@ function createUsersTable() : void {
                                 $setted = [];
 
                                 foreach ($materias as $Materia) {
+
+                                    if(is_object($Materia)) $Materia = get_object_vars($Materia);
+
                                     $matcru = $row["MateriasTurma"];
                                     $matproce = explode(',', $matcru);
                                     foreach($matproce as $matId) {
@@ -1503,6 +1524,7 @@ function getProfessorByMateria(int $Id) : User|Null {
     if(!$users) return null;
 
     foreach($users as $user) {
+        if(is_object($user)) $user = get_object_vars($user);
         $MateriasTurmaFromDB = $user["MateriasTurma"];
         $MateriasFormated = explode(',', $MateriasTurmaFromDB);
 
@@ -1580,6 +1602,7 @@ function getGallery()
     echo "<div style='width: 100%; display: flex; flex-wrap: wrap; justify-content: space-between;'>";
 
     foreach ($galleryImages as $img) {
+        if(is_object($img)) $img = get_object_vars($img);
         $path = site("root") . $img["Image"];
 
         echo "<div class='gallery-image'  style='margin: 10px; border: solid black 2px; display: flex;   width: 17vw; height: 15vw; background-image: url($path); background-color: white; background-repeat: no-repeat; background-size: cover; background-position: center; justify-content: center; align-items: center; text-align: center; position: relative;'>"
