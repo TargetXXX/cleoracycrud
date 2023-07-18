@@ -33,10 +33,10 @@ define("DATA_LAYER_CONFIG", [
 define("MAIL", [
     "host" => "smtp.hostinger.com",
     "port" => "587",
-    "user" => "secretaria@cleoracy.online",
+    "user" => "",
     "password" => "",
     "from_name" => "Secretaria",
-    "from_email" => "secretaria@cleoracy.online"
+    "from_email" => ""
 ]);
 
 // Criação das tabelas caso não existam
@@ -141,7 +141,7 @@ try {
         ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_general_ci;
     ");
 
-    $query = $pdo->query("SHOW TABLES LIKE 'usuarios'");
+    $query = $pdo->query("SELECT * FROM usuarios");
     $tableExists = $query->rowCount() > 0;
 
     if (!$tableExists) {

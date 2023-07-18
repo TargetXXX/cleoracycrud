@@ -89,7 +89,7 @@
                     } else {
 
                         foreach($turmas as $Turma) { ?>
-                            <option value="<?=$Turma["Id"]?>"><?=$Turma["Name"]?></option>"
+                            <option value="<?=$Turma->Id?>"><?=$Turma->Name?></option>"
 
                    <?php     }
                     }
